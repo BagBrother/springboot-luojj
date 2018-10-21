@@ -12,6 +12,7 @@ import java.util.List;
 public class IcdsCatServiceImpl implements IcdsCatService {
     @Autowired
     private IcdsCatRepository icdsCatRepository;
+
     @Override
     public IcdsCat save(IcdsCat icdsCat) {
         return icdsCatRepository.save(icdsCat);
@@ -35,5 +36,10 @@ public class IcdsCatServiceImpl implements IcdsCatService {
     @Override
     public IcdsCat findById(int catId) {
         return icdsCatRepository.findByCatId(catId);
+    }
+
+    @Override
+    public IcdsCat add(IcdsCat icdsCat) {
+        return icdsCatRepository.save(icdsCat);
     }
 }

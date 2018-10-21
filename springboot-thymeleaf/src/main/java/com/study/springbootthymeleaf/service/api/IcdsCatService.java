@@ -14,4 +14,6 @@ public interface IcdsCatService {
     void delete(Integer catId);
 
     IcdsCat findById(int catId);
+
+    IcdsCat add(IcdsCat icdsCat);
 }

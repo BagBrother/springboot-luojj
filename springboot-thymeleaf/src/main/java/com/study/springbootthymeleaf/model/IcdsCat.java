@@ -2,6 +2,7 @@ package com.study.springbootthymeleaf.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.util.Date;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "conf_icds_cat_list")
 public class IcdsCat implements Serializable {

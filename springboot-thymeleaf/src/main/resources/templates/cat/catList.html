@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>catList</title>
-    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
-    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="webjars/bootstrap/4.1.3/css/bootstrap.css" />  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="container">
-    <br />
-    <div>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>栏目ID</th>
-                    <th>栏目父ID</th>
-                    <th>名称</th>
-                    <th>类型</th>
-                    <th>创建时间</th>
-                    <th>状态</th>
-                    <th>删除</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="icdsCat:${icdsCats}" >
-                    <th scope="row" th:text="${icdsCat.catId}"></th>
-                    <td th:text="${icdsCat.catPid}"></td>
-                    <td th:text="${icdsCat.catName}"></td>
-                    <td th:text="${icdsCat.catType}"></td>
-                    <td th:text="${icdsCat.createTime}"></td>
-                    <td th:text="${icdsCat.status}"></td>
-                    <th ><a th:href="@{/cat/delete(catId=${icdsCat.catId})}">delete</a></th>
-                </tr>
-            </tbody>
-        </table>
+<br/>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>栏目ID</th>
+            <th>栏目父ID</th>
+            <th>名称</th>
+            <th>类型</th>
+            <th>创建时间</th>
+            <th>状态</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="icdsCat:${icdsCats}">
+            <th scope="row" th:text="${icdsCat.catId}"></th>
+            <td th:text="${icdsCat.catPid}"></td>
+            <td th:text="${icdsCat.catName}"></td>
+            <td th:text="${icdsCat.catType}"></td>
+            <td th:text="${icdsCat.createTime}"></td>
+            <td th:text="${icdsCat.status}"></td>
+            <th><a th:href="@{/cat/delete(catId=${icdsCat.catId})}">delete</a></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <div class="col-sm-2 custom-control-label">
+        <a th:href="@{/cat/toAdd}" class="btn btn-info">add</a>
     </div>
+</div>
 </body>
 </html>
