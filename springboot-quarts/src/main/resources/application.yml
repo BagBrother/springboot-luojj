@@ -13,6 +13,8 @@ spring:
       url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
       driver-class-name: com.mysql.jdbc.Driver
   quartz:
+    jdbc:
+      initialize-schema: always
     properties:
       org:
         quartz:
