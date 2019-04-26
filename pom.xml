@@ -23,6 +23,7 @@
     </properties>
     <modules>
         <module>springboot-thymeleaf</module>
+        <module>springboot-quarts</module>
     </modules>
 
     <dependencies>

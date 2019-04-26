@@ -2,16 +2,16 @@ server:
   port: 8888
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8
-    name: root
-    password: admin
     druid:
       initialSize: 1
       minIdle: 3
       maxActive: 200
       maxWait: 60000
+      username: root
+      password: admin
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
   quartz:
     properties:
       org:
@@ -35,5 +35,5 @@ spring:
 
 
 mybatis:
-  mapper-locations: classpatth:mybatis
-  type-aliases-package:
+  mapper-locations: classpath:mybatis/*.xml
+  type-aliases-package: com.study.springbootquarts.entity

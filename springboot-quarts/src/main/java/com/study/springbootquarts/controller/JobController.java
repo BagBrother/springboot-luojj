@@ -26,7 +26,6 @@ public class JobController {
      */
 
     @Autowired
-    @Qualifier("Scheduler")
     private Scheduler scheduler;
 
     private static Logger log = LoggerFactory.getLogger(JobController.class);
